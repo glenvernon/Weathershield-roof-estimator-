@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weathershield Roof Estimator</title>
+  <style>
+    body { font-family: sans-serif; max-width: 900px; margin: auto; padding: 20px; }
+    canvas { border: 2px solid #1e40af; background: #fff; display: block; margin: 10px auto; max-width: 100%; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background: #f0f0f0; }
+    button, input { margin-top: 10px; padding: 8px; }
+  </style>
+</head>
+<body>
+<h1>Weathershield Roof Estimator</h1>
+
+<label>Client Name: <input type="text" id="client" /></label>
+<label>Project Location: <input type="text" id="project" /></label>
+<label>Date: <input type="date" id="date" /></label>
+<label>Scale (ft per pixel): <input type="number" id="scale" value="0.25" step="0.01" /></label>
+
+<canvas id="canvas" width="600" height="400"></canvas>
+<button onclick="resetDrawing()">Reset</button>
+<button onclick="closeShape()">Close Shape</button>
+<button onclick="generateEstimate()">Generate Estimate</button>
+<div id="info"></div>
+<table>
+  <thead>
+    <tr><th>Material</th><th>Quantity</th><th>Unit Price ($)</th><th>Total</th></tr>
+  </thead>
+  <tbody id="materialsTableBody"></tbody>
+  <tfoot>
+    <tr><td colspan="3">Subtotal</td><td id="subtotalCell"></td></tr>
+    <tr><td colspan="3">GCT (15%)</td><td id="taxCell"></td></tr>
+    <tr><td colspan="3"><b>Total</b></td><td id="totalCell"></td></tr>
+  </tfoot>
+</table>
+
+<script>
+// Drawing and estimator logic here...
+// (Script content continues from earlier step with drawing, scale, estimate logic)
+</script>
+</body>
+</html>
